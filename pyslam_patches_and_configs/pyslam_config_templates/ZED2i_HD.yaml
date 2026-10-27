@@ -1,0 +1,64 @@
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+# Viewer.on: 1 is ON, 0 is OFF
+Viewer.on: 1
+
+Viewer.KeyFrameSize: 0.6
+Viewer.KeyFrameLineWidth: 2
+Viewer.GraphLineWidth: 1
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.7
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -10
+Viewer.ViewpointZ: -0.1
+Viewer.ViewpointF: 2000
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 539.686086
+Camera.fy: 539.686086
+Camera.cx: 649.932503
+Camera.cy: 371.920048
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+Camera.width: 1280
+Camera.height: 720
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# stereo baseline times fx (ZED2i SN33088067, HD720, rectified by bag2kitti.py, baseline 0.120004 m)
+Camera.bf: 64.764655
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40
+
+#--------------------------------------------------------------------------------------------
+# Features extraction 
+#--------------------------------------------------------------------------------------------
+
+FeatureTrackerConfig.nFeatures: 2000
+
+#--------------------------------------------------------------------------------------------
+# Matching (Data Association)
+#--------------------------------------------------------------------------------------------
+
+#Matching.farPointsThreshold: 20.0    # meters (to exclude far points from matching when we have an outdoor scene)
+
+#--------------------------------------------------------------------------------------------
+# Keyframe generation
+#--------------------------------------------------------------------------------------------
+# KeyFrame.useFovCentersBasedGeneration: 1  # compute 3D fov centers of camera frames by using median depth and use their distances to control keyframe generation
+# KeyFrame.maxFovCentersDistance: 0.1       # max distance between fov centers in order to generate a keyframe

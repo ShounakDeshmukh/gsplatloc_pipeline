@@ -1,0 +1,18 @@
+# Large data stays on the lab machines (~/ros2_bag on myoon2-ub01), never in git
+*.ply
+*.mp4
+*.mcap
+*.db3
+*.npz
+*.pt
+*.pth
+*.h5
+**/*xfeat_features*/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Machine-local
+.claude/

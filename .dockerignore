@@ -1,0 +1,5 @@
+# Only the files the Dockerfile COPYs are needed in the build context
+*
+!pyslam_docker_image_trimmed_headless/requirements_pyslam_headless_pinned.txt
+!pyslam_patches_and_configs/patch_pyslam_tracking.py
+!pyslam_patches_and_configs/patch_pyslam_headless_bundle_adjust_and_save.py

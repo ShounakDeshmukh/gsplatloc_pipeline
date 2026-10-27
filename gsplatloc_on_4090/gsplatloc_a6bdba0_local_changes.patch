@@ -1,0 +1,50 @@
+diff --git a/arguments/__init__.py b/arguments/__init__.py
+index 7a13f38..538642f 100644
+--- a/arguments/__init__.py
++++ b/arguments/__init__.py
+@@ -68,7 +68,7 @@ class PipelineParams(ParamGroup):
+     def __init__(self, parser):
+         self.convert_SHs_python = False
+         self.compute_cov3D_python = False
+-        self.debug = True
++        self.debug = False
+         super().__init__(parser, "Pipeline Parameters")
+ 
+ class OptimizationParams(ParamGroup):
+diff --git a/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h b/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h
+index bc8c2d4..52c6c4e 100644
+--- a/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h
++++ b/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h
+@@ -1,3 +1,4 @@
++#include <cstdint>
+ /*
+  * Copyright (C) 2023, Inria
+  * GRAPHDECO research group, https://team.inria.fr/graphdeco
+diff --git a/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer.h b/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer.h
+index 9a68bea..06fe84b 100644
+--- a/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer.h
++++ b/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer.h
+@@ -1,3 +1,4 @@
++#include <cstdint>
+ /*
+  * Copyright (C) 2023, Inria
+  * GRAPHDECO research group, https://team.inria.fr/graphdeco
+diff --git a/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.h b/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.h
+index ac973c9..c9b0374 100644
+--- a/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.h
++++ b/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.h
+@@ -1,3 +1,4 @@
++#include <cstdint>
+ /*
+  * Copyright (C) 2023, Inria
+  * GRAPHDECO research group, https://team.inria.fr/graphdeco
+diff --git a/submodules/simple-knn/simple_knn.cu b/submodules/simple-knn/simple_knn.cu
+index e72e4c9..ef0f656 100644
+--- a/submodules/simple-knn/simple_knn.cu
++++ b/submodules/simple-knn/simple_knn.cu
+@@ -1,3 +1,5 @@
++#include <cfloat>
++#include <cfloat>
+ /*
+  * Copyright (C) 2023, Inria
+  * GRAPHDECO research group, https://team.inria.fr/graphdeco

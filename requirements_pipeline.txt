@@ -1,0 +1,8 @@
+# Host Python environment for pipeline_bag_to_dataset/ and gsplatloc_on_4090/export_dataset_for_gsplatloc.py
+# (versions in use on myoon2-ub01, Python 3.11). Install: uv venv --python 3.11 && uv pip install -r requirements_pipeline.txt
+numpy==2.4.6
+opencv-python-headless==5.0.0.93
+rosbags==0.11.5
+ijson==3.5.1
+scipy==1.17.1
+pillow==12.3.0
